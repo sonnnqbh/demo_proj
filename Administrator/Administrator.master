@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Administrator.master.cs" Inherits="Administrator_Administrator" %>
+<%@ Register src="~/Administrator/usercontrol/head_css.ascx" tagname="head_css" tagprefix="uc1" %>
+<%@ Register src="~/Administrator/usercontrol/header.ascx" tagname="header" tagprefix="uc2" %>
+<%@ Register src="~/Administrator/usercontrol/footer.ascx" tagname="footer" tagprefix="uc3" %>
+<%@ Register src="~/Administrator/usercontrol/menusidebar.ascx" tagname="menusidebar" tagprefix="uc4" %>
+<%@ Register src="~/Administrator/usercontrol/footer_js.ascx" tagname="footer_js" tagprefix="uc5" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>SMS PORTAL</title>
+    <uc1:head_css ID="head_css1" runat="server" />
+    <asp:ContentPlaceHolder id="css_more" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <uc4:menusidebar ID="menusidebar1" runat="server" />
+    <uc2:header ID="header1" runat="server" />
+    <div class="px-content">
+        <form id="frmMain" runat="server">
+            <asp:ContentPlaceHolder id="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+    </div>
+    <uc3:footer ID="footer1" runat="server" />
+    <uc5:footer_js ID="footer_js1" runat="server" />
+    <asp:ContentPlaceHolder ID="jsmore" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
